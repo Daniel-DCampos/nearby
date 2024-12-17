@@ -1,6 +1,6 @@
 import { FlatList } from "react-native";
 import { s } from "./styles";
-import { Category } from "../Category";
+import { Category } from "../category";
 
 export type CategoriesProps = {
   id: string;
@@ -29,7 +29,7 @@ export function Categories({ data, selected, onSelect }: Props) {
       horizontal
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={s.content}
-      style={s.content}
+      style={[s.container]}
     />
   );
 }

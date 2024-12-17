@@ -1,5 +1,5 @@
 import { Pressable, PressableProps, Text } from "react-native";
-import { s } from "./styles";
+import { s } from "./styles"
 import { categoriesIcons } from "@/utils/categories-icons";
 import { colors } from "@/styles/theme";
 

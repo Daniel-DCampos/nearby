@@ -6,11 +6,11 @@ export const s = StyleSheet.create({
     maxHeight: 36,
     position: "absolute",
     zIndex: 1,
-    top: 64,
+    top: 15,
   },
   content:{
     gap: 8,
     paddingHorizontal: 24,
-    marginTop: 2
+    marginTop: 2,
   }
 });
