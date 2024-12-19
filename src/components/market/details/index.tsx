@@ -2,6 +2,7 @@ import { IconPhone, IconMapPin, IconTicket } from "@tabler/icons-react-native";
 import { View, Text } from "react-native";
 import { s } from "./styles";
 import { Button } from "@/components/button";
+import { Info } from "@/components/info";
 
 export type PropsDetails = {
   name: string;
@@ -26,6 +27,22 @@ export function Details({ data }: Props) {
 
       <View style={s.group}>
         <Text style={s.title}>Informações</Text>
+
+        <Info
+          icon={IconTicket}
+          description={`${data.cupons} cupons disponíveis`}
+        />
+        <Info icon={IconMapPin} description={data.address} />
+        <Info icon={IconPhone} description={data.phone} />
+      </View>
+
+      <View style={s.group}>
+        <Text style={s.title}>Regulamento</Text>
+        {data.rules.map((item) => (
+          <Text key={item.id} style={s.rule}>
+            {item.description}
+          </Text>
+        ))}
       </View>
     </View>
   );
