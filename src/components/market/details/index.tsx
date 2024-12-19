@@ -9,7 +9,7 @@ export type PropsDetails = {
   description: string;
   address: string;
   phone: string;
-  cupons: string;
+  coupons: string;
   rules: {
     id: string;
     description: string;
@@ -30,7 +30,7 @@ export function Details({ data }: Props) {
 
         <Info
           icon={IconTicket}
-          description={`${data.cupons} cupons disponíveis`}
+          description={`${data.coupons} cupons disponíveis`}
         />
         <Info icon={IconMapPin} description={data.address} />
         <Info icon={IconPhone} description={data.phone} />
@@ -40,7 +40,7 @@ export function Details({ data }: Props) {
         <Text style={s.title}>Regulamento</Text>
         {data.rules.map((item) => (
           <Text key={item.id} style={s.rule}>
-            {item.description}
+            {`\u2022 ${item.description}`}
           </Text>
         ))}
       </View>
